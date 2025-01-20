@@ -5,7 +5,7 @@ from langchain.text_splitter import CharacterTextSplitter
 import langchain
 import base64
 from langchain_google_genai import  GoogleGenerativeAIEmbeddings
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from langchain_google_genai import ChatGoogleGenerativeAI
