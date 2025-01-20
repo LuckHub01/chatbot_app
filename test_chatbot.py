@@ -32,7 +32,7 @@ def detect_language(text):
 from googletrans import Translator
 
 
-logo = r"images\genai1.png"  # Remplacez par le chemin de votre image
+logo = r"data\images\genai1.png"  # Remplacez par le chemin de votre image
 
 st.logo(logo, icon_image=logo)
 
