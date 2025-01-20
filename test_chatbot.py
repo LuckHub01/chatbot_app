@@ -239,7 +239,7 @@ def handle_userinput(user_question):
             ]
             # for result in web_results:
             #     assistant_response += f"    ** {result['title']}\n\n"
-            assistant_response += "\Liens de recherche :\n" + "\n".join(formatted_results)
+            assistant_response += "Liens de recherche :\n" + "\n".join(formatted_results)
             #handle_search_results(web_results)
         else:
             assistant_response += "\nAucun résultat pertinent trouvé."
