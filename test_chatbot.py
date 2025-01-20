@@ -319,7 +319,7 @@ def get_pdfs_from_folder(folder_path):
                 pdf_files.append(os.path.join(folder_path, file_name))
         return pdf_files
     
-folder_path = r"data"
+folder_path = r"data\data"
 
 # Charger le modèle de résumé
 summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
@@ -362,7 +362,7 @@ def main():
     st.text("Maya, votre protectrice digitale")
     
     # Ajouter une image à gauche dans la barre latérale
-    sidebar_image_path = r"images\im1.jpg"  # Remplacez par le chemin de votre image
+    sidebar_image_path = r"data\images\im1.jpg"  # Remplacez par le chemin de votre image
     if os.path.exists(sidebar_image_path):
         # sidebar_image = Image.open(sidebar_image_path)
         # st.sidebar.image(sidebar_image, use_column_width=True)
@@ -379,7 +379,7 @@ def main():
             """,
             unsafe_allow_html=True
         ) # Ajouter une image au centre avant le titre
-    center_image_path = r"images\im1bg.png"  # Remplacez par le chemin de votre image
+    center_image_path = r"data\images\im1bg.png"  # Remplacez par le chemin de votre image
    
     if os.path.exists(center_image_path):
         # Charger l'image
