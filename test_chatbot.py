@@ -26,6 +26,10 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 print([m.name for m in genai.list_models()])
 
+from langchain.embeddings import HuggingFaceEmbeddings
+
+
+
 
 def detect_language(text):
     try:
@@ -104,7 +108,10 @@ def get_text_chunks(text):
 
 @st.cache_resource
 def get_vectorstore(text_chunks):
-    embeddings= GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-2") 
+    #embeddings= GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-2") 
+    embeddings = HuggingFaceEmbeddings(
+        model_name="sentence-transformers/all-MiniLM-L6-v2"
+    )
     #embeddings = GoogleGenerativeAIEmbeddings(
     #    model="models/text-embedding-004",
     #    google_api_key=os.getenv("GOOGLE_API_KEY")
