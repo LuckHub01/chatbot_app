@@ -102,8 +102,9 @@ def get_text_chunks(text):
     chunks= text_splitter.split_text(text)
     return chunks
 
+@st.cache_resource
 def get_vectorstore(text_chunks):
-    embeddings= GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-2") 
+    embeddings= GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-1") 
     #embeddings = GoogleGenerativeAIEmbeddings(
     #    model="models/text-embedding-004",
     #    google_api_key=os.getenv("GOOGLE_API_KEY")
