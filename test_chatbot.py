@@ -22,6 +22,11 @@ from pdf2image import convert_from_path
 from pytesseract import image_to_string
 import PyPDF2
 
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+
+print([m.name for m in genai.list_models()])
+
+
 def detect_language(text):
     try:
         lang = detect(text)
