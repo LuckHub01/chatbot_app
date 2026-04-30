@@ -103,11 +103,11 @@ def get_text_chunks(text):
     return chunks
 
 def get_vectorstore(text_chunks):
-    #embeddings= GoogleGenerativeAIEmbeddings(model="models/embedding-001") 
-    embeddings = GoogleGenerativeAIEmbeddings(
-        model="models/text-embedding-004",
-        google_api_key=os.getenv("GOOGLE_API_KEY")
-    )
+    embeddings= GoogleGenerativeAIEmbeddings(model="models/embedding-001") 
+    #embeddings = GoogleGenerativeAIEmbeddings(
+    #    model="models/text-embedding-004",
+    #    google_api_key=os.getenv("GOOGLE_API_KEY")
+    #)
 
     vectorstore=FAISS.from_texts(texts=text_chunks, embedding=embeddings)
     return vectorstore
